@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rain</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" type="text/css" href={{url_for('static',filename='montserrat-font.css')}}>
+	<link rel="stylesheet" type="text/css" href={{url_for('static',filename='material-design-iconic-font.min.css')}}>
+    <link rel="stylesheet" href={{url_for('static',filename='predict.css')}}/>
+</head>
+<body class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail"  action="/predict", method="POST">
+				<div class="form-left">
+					<h2>General Infomation</h2>
+					<div class="form-row">
+						<select id="location" name="location">
+						    <option selected>Select Location</option>
+                            <option value= 2>Albury</option>
+                            <option value= 4>BadgerysCreek</option>
+                            <option value= 10>Cobar</option>
+                            <option value= 11>CoffsHarbour</option>
+                            <option value= 21>Moree</option>
+                            <option value= 24>Newcastle</option>
+                            <option value= 26>NorahHead</option>
+                            <option value= 27>NorfolkIsland</option>
+                            <option value= 30>Penrith</option>
+                            <option value= 34>Richmondr</option>
+                            <option value= 37>Sydney</option>
+                            <option value= 38>SydneyAirport</option>
+                            <option value= 42>WaggaWagga</option>
+                            <option value= 45>Williamtown</option>
+                            <option value= 47>Wollongong</option>
+                            <option value= 9>Canberra</option>
+                            <option value= 40>Tuggeranong</option>
+                            <option value= 23>MountGinini</option>
+                            <option value= 5>Ballarat</option>
+                            <option value= 6>Bendigo</option>
+                            <option value= 35>Sale</option>
+                            <option value= 19>MelbourneAirport</option>
+                            <option value= 18>Melbourne</option>
+                            <option value= 20>Mildura</option>
+                            <option value= 25>Nhil</option>
+                            <option value= 33>Portland</option>
+                            <option value= 44>Watsonia</option>
+                            <option value= 12>Dartmoor</option>
+                            <option value= 7>Brisbane</option>
+                            <option value= 8>Cairns</option>
+                            <option value= 14>GoldCoast</option>
+                            <option value= 39>Townsville</option>
+                            <option value= 0>Adelaide</option>
+                            <option value= 22>MountGambier</option>
+                            <option value= 28>Nuriootpa</option>
+                            <option value= 48>Woomera</option>
+                            <option value= 1>Albany</option>
+                            <option value= 46>Witchcliffe</option>
+                            <option value= 29>PearceRAAF</option>
+                            <option value= 32>PerthAirport</option>
+                            <option value= 31>Perth</option>
+                            <option value= 36>SalmonGums</option>
+                            <option value= 43>Walpole</option>
+                            <option value= 15>Hobart</option>
+                            <option value= 17>Launceston</option>
+                            <option value= 3>AliceSprings</option>
+                            <option value= 13>Darwin</option>
+                            <option value= 16>Katherine</option>
+							<option value= 41>Uluru</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-row">
+						<input type="date" class="company" id="date" name="date" placeholder="Date" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="mintemp" name="mintemp" class="input-text" placeholder="Minimum Temperature" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="maxtemp" name="maxtemp" class="input-text" placeholder="Maximum Temperature" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="rainfall" name="rainfall" class="input-text" placeholder="Rainfall" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="evaporation" name="evaporation" class="input-text" placeholder="Evaporation" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" id="sunshine" name="sunshine" class="company" placeholder="Sunshine" required>
+					</div>
+					<div class="form-row">
+						<select id="raintoday" name="raintoday">
+						    <option value="" disabled selected hidden>Did it Rain Today ?</option>
+                            <option value = 1>Yes</option>
+                            <option value = 0>No</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-row">
+						<input type="text" id="windgustspeed" name="windgustspeed" class="company" placeholder="Wind Gust Speed" required>
+					</div>		
+					<div class="form-row">
+						<select id="windgustdir" name = "windgustdir">
+						    <option value="" disabled selected hidden>Wind Gust Direction</option>
+                            <option value= 0>W</option>
+                            <option value= 1>WNW</option>
+                            <option value= 2>WSW</option>
+                            <option value= 3>NE</option>
+                            <option value= 4>NNW</option>
+                            <option value= 5>N</option>
+                            <option value= 6>NNE</option>
+                            <option value= 7>SW</option>
+                            <option value= 8>ESE</option>
+                            <option value= 9>ENE</option>
+                            <option value= 10>SSE</option>
+                            <option value= 11>S</option>
+                            <option value= 12>NW</option>
+                            <option value= 13>SE</option>
+                            <option value= 14>E</option>
+                            <option value= 15>SSW</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>				
+				</div>
+				<div class="form-right">
+					<h2>Detailed Information</h2>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<select id="winddir9am" name="winddir9am">
+							<option value="" disabled selected hidden>Wind Direction 9am</option>
+							<option value= 0>W</option>
+                            <option value= 1>NNW</option>
+                            <option value= 2>SE</option>
+                            <option value= 3>ENE</option>
+                            <option value= 4>SW</option>
+                            <option value= 5>SSE</option>
+                            <option value= 6>S</option>
+                            <option value= 7>NE</option>
+                            <option value= 8>WNW</option>
+                            <option value= 9>SSW</option>
+                            <option value= 10>N</option>
+                            <option value= 11>WSW</option>
+                            <option value= 12>ESE</option>
+                            <option value= 13>E</option>
+                            <option value= 14>NW</option>
+                            <option value= 15>NNE</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+						<div class="form-row form-row-2">
+							<select id="winddir3pm" name = "winddir3pm">
+							<option value="" disabled selected hidden>Wind Direction 3pm</option>
+							<option value= 0>WNW</option>
+                            <option value= 1>WSW</option>
+                            <option value= 2>E</option>
+                            <option value= 3>NW</option>
+                            <option value= 4>W</option>
+                            <option value= 5>SSE</option>
+                            <option value= 6>ESE</option>
+                            <option value= 7>ENE</option>
+                            <option value= 8>NNW</option>
+                            <option value= 9>SSW</option>
+                            <option value= 10>SW</option>
+                            <option value= 11>SE</option>
+                            <option value= 12>N</option>
+                            <option value= 13>s</option>
+                            <option value= 14>NNE</option>
+                            <option value= 15>NE</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="windspeed9am" name="windspeed9am" class="code" placeholder="Wind Speed 9am" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="windspeed3pm" name="windspeed3pm" class="phone" placeholder="Wind Speed 3pm" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="humidity9am" name="humidity9am" class="code" placeholder="Humidity 9am" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="humidity3pm" name="humidity3pm" class="phone" placeholder="Humidity 3pm" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="pressure9am" name="pressure9am" class="code" placeholder="Pressure 9am" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="pressure3pm" name="pressure3pm" class="phone" placeholder="Pressure 3pm" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="temp9am" name="temp9am" class="code" placeholder="Temperature 9am" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="temp3pm" name="temp3pm" class="phone" placeholder="Temperature 3pm" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" id="cloud9am" name="cloud9am" class="code" placeholder="Cloud 9am" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" id="cloud3pm" name="cloud3pm" class="phone" placeholder="Cloud 3pm" required>
+						</div>
+					</div>
+					<div class="form-checkbox">
+						<label class="container"><p>I have entered accurate Infomation.</p>
+						  	<input type="checkbox" name="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="form-checkbox">
+						<label class="container"><p>I have entered approximate Infomation.</p>
+						  	<input type="checkbox" name="checkbox">
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="form-row-last">
+						<button type="submit" name="register" class=" register" >P r e d i c t</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div>
+		<h1><center> {{ prediction }} </center></h1>
+    </div>
+</body>
+</html>

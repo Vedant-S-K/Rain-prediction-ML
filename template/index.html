@@ -1,0 +1,171 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href={{url_for('static',filename='index.css')}}/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+
+
+<body>
+	
+	<div id="mySidenav" class="sidenav">
+	<p class="logo">Will it  <span>Rain ?</span></p>
+  <a href="#" class="icon-a"><i class="icons"></i>&#9776;&nbsp;Dashboard</a>
+  <a href="/visualize"class="icon-a"><i class="fa fa-bar-chart icons"></i> &nbsp;&nbsp;Visualizations</a>
+  <a href="/about"class="icon-a"><i class="fa fa-info-circle"></i> &nbsp;&nbsp;About</a>
+  <a href="/developer"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Developer</a>
+  <a href="/predict"class="icon-a"><i class="fa fa-wrench icons"></i> &nbsp;&nbsp;Predictor</a>
+
+</div>
+<div id="main">
+
+	<div class="head">
+		<div class="col-div-6">
+<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >&#9776; Dashboard</span>
+<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >&#9776; Dashboard</span>
+</div>
+	
+	<div class="col-div-6">
+	<div class="profile">
+
+		<img src="../static/user.png" class="pro-img" />
+		<p>Vedant Khatavkar <span>Data Science Trainee</span></p>
+	</div>
+</div>
+	<div class="clearfix"></div>
+</div>
+
+	<div class="clearfix"></div>
+	<br/>
+	
+	<div class="col-div-3">
+  <a href = "/visualize">
+		<div class="box">
+			<p>Data<br/><span>Visualizations</span></p>
+			<i class="fa fa-bar-chart box-icon"></i>
+		</div></a>
+	</div>
+	<div class="col-div-3">
+  <a href = "/about">
+		<div class="box">
+			<p>About<br/><span>Will it Rain</span></p>
+			<i class="fa fa-info-circle box-icon"></i>
+		</div></a>
+	</div>
+	<div class="col-div-3">
+  <a href = "/developer">
+		<div class="box">
+			<p>Project<br/><span>Developer</span></p>
+			<i class="fa fa-shopping-bag box-icon"></i>
+		</div></a>
+	</div>
+	<div class="col-div-3">
+		<a href = "/predict">
+    <div class="box">
+			<p>Rain<br/><span>Predictor</span></p>
+			<i class="fa fa-wrench box-icon"></i>
+		</div></a>
+	</div>
+	<div class="clearfix"></div>
+	<br/><br/>
+	<div class="col-div-8">
+		<div class="box-8">
+		<div class="content-box ">
+			<p>Machine Learning Models Used &#8595;<span class="test" >A c c u r a c y &#8595;</span></p>
+			<br/>
+			<table>
+  <tr>
+    <th>CatBoost Classifier</th>
+    <th>Cat</th>
+    <th><span class="cat">86 %</span></th>
+  </tr>
+  <tr>
+    <th>RandomForest Classifier</th>
+    <th>Rf</th>
+    <th>85 %</th>
+  </tr>
+  <tr>
+    <th>LogisticRegression</th>
+    <th>Logreg</th>
+    <th>84 %</th>
+  </tr>
+  <tr>
+    <th>KNeighbors Classifier</th>
+    <th>Knn</th>
+    <th>81 %</th>
+  </tr>
+  <tr>
+    <th>XGBoost Classifier</th>
+    <th>Xgb</th>
+    <th>85 %</th>
+  </tr>
+  <tr>
+    <th>Support Vector Machine</th>
+    <th>SVM</th>
+    <th>85 %</th>
+  </tr>
+  
+</table>
+		</div>
+	</div>
+	</div>
+
+	<div class="col-div-4">
+		<div class="box-4">
+		<div class="content-box">
+			<p>Best Accuracy <span>CatBoost</span></p>
+			<div class="circle-wrap">
+    <div class="circle">
+      <div class="mask full">
+        <div class="fill"></div>
+      </div>
+      <div class="mask half">
+        <div class="fill"></div>
+      </div>
+      <div class="inside-circle"> 86% </div>
+    </div>
+  </div>
+		</div>
+	</div>
+	</div>
+		
+	<div class="clearfix"></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  $(".nav").click(function(){
+    $("#mySidenav").css('width','70px');
+    $("#main").css('margin-left','70px');
+    $(".logo").css('visibility', 'hidden');
+    $(".logo span").css('visibility', 'visible');
+     $(".logo span").css('margin-left', '-10px');
+     $(".icon-a").css('visibility', 'hidden');
+     $(".icons").css('visibility', 'visible');
+     $(".icons").css('margin-left', '-8px');
+      $(".nav").css('display','none');
+      $(".nav2").css('display','block');
+  });
+
+$(".nav2").click(function(){
+    $("#mySidenav").css('width','300px');
+    $("#main").css('margin-left','300px');
+    $(".logo").css('visibility', 'visible');
+     $(".icon-a").css('visibility', 'visible');
+     $(".icons").css('visibility', 'visible');
+     $(".nav").css('display','block');
+      $(".nav2").css('display','none');
+ });
+
+</script>
+
+</body>
+
+
+</html>
