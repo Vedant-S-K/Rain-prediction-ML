@@ -1,7 +1,7 @@
 # Rain-prediction
 
 Rain Prediction is an application which basically predicts will it "rain" tomorrow or not. The dataset I have used is the Rainfall dataset of Australia from kaggle.
-Dataset link : https://www.kaggle.com/jsphyg/weather-dataset-rattle-package . This project is tested over a lot of ml models like catboost, xgboost, random forest, support vector classifier, etc.. Out of these models catboost performed very well giving an Accuracy score of 86 better than others.
+Dataset link : https://www.kaggle.com/jsphyg/weather-dataset-rattle-package This project is tested over a lot of ml models like catboost, xgboost, random forest, support vector classifier, etc.. Out of these models catboost performed very well giving an Accuracy score of 86 better than others.
 
 # Website Link 
 https://rain-prediction-app.herokuapp.com/
