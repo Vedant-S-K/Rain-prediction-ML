@@ -4,7 +4,7 @@ Rain Prediction is an application which basically predicts will it "rain" tomorr
 Dataset link : https://www.kaggle.com/jsphyg/weather-dataset-rattle-package This project is tested over a lot of ml models like catboost, xgboost, random forest, support vector classifier, etc.. Out of these models catboost performed very well giving an Accuracy score of 86 better than others.
 
 # Website Link 
-https://rain-prediction-app.herokuapp.com/
+https://rain-prediction-web-app.herokuapp.com/
 
 # Tech
 Front-End: HTML, CSS, Bootstrap
@@ -72,7 +72,7 @@ The conclusion were made using classification metrics.
 
 The model is deployed using Flask at Heroku server at :
 
-https://rain-prediction-app.herokuapp.com/
+https://rain-prediction-web-app.herokuapp.com/
 
 # LinkedIn profile link :
 
