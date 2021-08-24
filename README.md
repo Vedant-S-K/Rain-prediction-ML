@@ -70,7 +70,7 @@ The conclusion were made using classification metrics.
 
 # Model Deployment
 
-The model is deployed using Flask at Heroku server at :
+The model is deployed using at Heroku server at :
 
 https://rain-prediction-web-app.herokuapp.com/
 
